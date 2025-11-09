@@ -68,33 +68,41 @@ ai46-website/
 ## Customization Guide
 
 ### Colors
+
 Edit the CSS variables in `styles.css`:
+
 ```css
 :root {
-    --primary-color: #4F46E5;    /* Main brand color */
-    --secondary-color: #06B6D4;   /* Accent color */
-    /* ... other colors */
+  --primary-color: #4f46e5; /* Main brand color */
+  --secondary-color: #06b6d4; /* Accent color */
+  /* ... other colors */
 }
 ```
 
 ### Content
+
 - **Company Info**: Update email and contact details in `index.html`
 - **Services**: Modify the services section to match your offerings
 - **Stats**: Update the numbers in the About section
 
 ### Form Handling
+
 The contact form currently logs to console. For production, integrate with:
+
 - [Formspree](https://formspree.io) - Simple form backend
 - [EmailJS](https://www.emailjs.com) - Send emails directly
 - [Netlify Forms](https://www.netlify.com/products/forms/) - If you move to Netlify
 
 Example Formspree integration:
+
 ```html
-<form action="https://formspree.io/f/YOUR-FORM-ID" method="POST">
+<form action="https://formspree.io/f/YOUR-FORM-ID" method="POST"></form>
 ```
 
 ### Images
+
 Currently using emojis as placeholders. Add real images:
+
 1. Create an `images` folder
 2. Add optimized images (use WebP format for best performance)
 3. Update `src` attributes in HTML
@@ -128,7 +136,7 @@ Currently using emojis as placeholders. Add real images:
 
 ## License
 
-© 2024 AI46. All rights reserved.
+© 2025 AI46. All rights reserved.
 
 ## Support
 
