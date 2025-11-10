@@ -1,0 +1,8 @@
+# AI46 - Robots.txt
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.ai46.app/sitemap.xml
