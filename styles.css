@@ -329,6 +329,12 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2rem;
 }
 
+.card-icon svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--primary-color);
+}
+
 .card-text {
     font-weight: 600;
     color: var(--gray-dark);
@@ -389,6 +395,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .icon {
     font-size: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--white);
 }
 
 .card h3 {
@@ -462,8 +471,18 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2rem;
 }
 
+.service-icon svg {
+    width: 2rem;
+    height: 2rem;
+    color: var(--primary-color);
+}
+
 .highlight .service-icon {
     background: rgba(255, 255, 255, 0.2);
+}
+
+.highlight .service-icon svg {
+    color: var(--white);
 }
 
 .service-card h3 {
@@ -535,6 +554,21 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 1px;
 }
 
+.about-illustration {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: var(--bg-secondary);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-illustration svg {
+    max-width: 100%;
+    height: auto;
+}
+
 .tech-stack {
     background: var(--bg-secondary);
     border-radius: 1rem;
@@ -580,6 +614,12 @@ h1, h2, h3, h4, h5, h6 {
 .feature-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
+}
+
+.feature-icon svg {
+    width: 3rem;
+    height: 3rem;
+    color: var(--primary-color);
 }
 
 .feature h3 {
@@ -638,6 +678,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-icon {
     font-size: 2rem;
+}
+
+.contact-icon svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--primary-color);
 }
 
 .contact-item h3 {
