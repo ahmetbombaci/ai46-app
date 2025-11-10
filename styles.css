@@ -16,6 +16,44 @@
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F3F4F6;
+    --bg-tertiary: #E5E7EB;
+    --text-primary: #111827;
+    --text-secondary: #374151;
+    --text-tertiary: #6B7280;
+    --border-color: #E5E7EB;
+    --navbar-bg: rgba(255, 255, 255, 0.95);
+    --hero-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+    --primary-color: #818CF8;
+    --primary-dark: #6366F1;
+    --primary-light: #A5B4FC;
+    --secondary-color: #22D3EE;
+    --dark-color: #F9FAFB;
+    --gray-dark: #E5E7EB;
+    --gray-medium: #9CA3AF;
+    --gray-light: #374151;
+    --gray-lighter: #1F2937;
+    --white: #111827;
+    --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-2: linear-gradient(135deg, #818CF8 0%, #22D3EE 100%);
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+    --bg-primary: #111827;
+    --bg-secondary: #1F2937;
+    --bg-tertiary: #374151;
+    --text-primary: #F9FAFB;
+    --text-secondary: #E5E7EB;
+    --text-tertiary: #9CA3AF;
+    --border-color: #374151;
+    --navbar-bg: rgba(17, 24, 39, 0.95);
+    --hero-gradient: linear-gradient(135deg, #1F2937 0%, #111827 100%);
 }
 
 * {
@@ -26,9 +64,11 @@
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    color: var(--dark-color);
+    color: var(--text-primary);
+    background: var(--bg-primary);
     line-height: 1.6;
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -66,11 +106,12 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--navbar-bg);
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
     box-shadow: var(--shadow-sm);
+    transition: background-color 0.3s ease;
 }
 
 .nav-wrapper {
@@ -144,12 +185,13 @@ h1, h2, h3, h4, h5, h6 {
 /* Hero Section */
 .hero {
     padding: 120px 0 80px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: var(--hero-gradient);
     min-height: 100vh;
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
+    transition: background 0.3s ease;
 }
 
 .hero::before {
@@ -255,7 +297,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .floating-card {
     position: absolute;
-    background: var(--white);
+    background: var(--bg-primary);
     border-radius: 1rem;
     padding: 1.5rem;
     box-shadow: var(--shadow-xl);
@@ -304,7 +346,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Problem Solution Section */
 .problem-solution {
     padding: 80px 0;
-    background: var(--white);
+    background: var(--bg-primary);
 }
 
 .cards-grid {
@@ -315,12 +357,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card {
-    background: var(--white);
+    background: var(--bg-primary);
     border-radius: 1rem;
     padding: 2rem;
     box-shadow: var(--shadow-md);
     transition: all 0.3s;
-    border: 1px solid var(--gray-light);
+    border: 1px solid var(--border-color);
 }
 
 .card:hover {
@@ -362,7 +404,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Services Section */
 .services {
     padding: 80px 0;
-    background: var(--gray-lighter);
+    background: var(--bg-secondary);
 }
 
 .services-grid {
@@ -373,7 +415,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-card {
-    background: var(--white);
+    background: var(--bg-primary);
     border-radius: 1rem;
     padding: 2rem;
     box-shadow: var(--shadow-md);
@@ -411,7 +453,7 @@ h1, h2, h3, h4, h5, h6 {
 .service-icon {
     width: 60px;
     height: 60px;
-    background: var(--gray-lighter);
+    background: var(--bg-secondary);
     border-radius: 1rem;
     display: flex;
     align-items: center;
@@ -454,7 +496,7 @@ h1, h2, h3, h4, h5, h6 {
 /* About Section */
 .about {
     padding: 80px 0;
-    background: var(--white);
+    background: var(--bg-primary);
 }
 
 .about-grid {
@@ -494,7 +536,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tech-stack {
-    background: var(--gray-lighter);
+    background: var(--bg-secondary);
     border-radius: 1rem;
     padding: 2rem;
 }
@@ -510,7 +552,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tech-item {
-    background: var(--white);
+    background: var(--bg-primary);
     padding: 0.75rem 1rem;
     border-radius: 0.5rem;
     text-align: center;
@@ -521,7 +563,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Why Us Section */
 .why-us {
     padding: 80px 0;
-    background: var(--gray-lighter);
+    background: var(--bg-secondary);
 }
 
 .features-grid {
@@ -578,7 +620,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Contact Section */
 .contact {
     padding: 80px 0;
-    background: var(--white);
+    background: var(--bg-primary);
 }
 
 .contact-grid {
@@ -610,7 +652,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Form Styles */
 .contact-form {
-    background: var(--gray-lighter);
+    background: var(--bg-secondary);
     padding: 2rem;
     border-radius: 1rem;
 }
@@ -624,10 +666,12 @@ h1, h2, h3, h4, h5, h6 {
 .form-group textarea {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid var(--gray-light);
+    border: 1px solid var(--border-color);
     border-radius: 0.5rem;
     font-size: 1rem;
     font-family: inherit;
+    background: var(--bg-primary);
+    color: var(--text-primary);
     transition: all 0.3s;
 }
 
@@ -696,6 +740,27 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* Theme Toggle */
+.theme-toggle {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+}
+
+.theme-toggle:hover {
+    background: var(--bg-tertiary);
+    transform: scale(1.05);
+}
+
 @media (max-width: 768px) {
     .nav-menu {
         display: none;
@@ -703,7 +768,7 @@ h1, h2, h3, h4, h5, h6 {
         top: 100%;
         left: 0;
         right: 0;
-        background: var(--white);
+        background: var(--bg-primary);
         flex-direction: column;
         padding: 1rem;
         box-shadow: var(--shadow-lg);

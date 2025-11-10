@@ -30,6 +30,35 @@ navLinks.forEach((link) => {
   });
 });
 
+// Dark Mode Toggle
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = document.querySelector(".theme-icon");
+const html = document.documentElement;
+
+// Check for saved theme preference or default to light mode
+const currentTheme = localStorage.getItem("theme") || "light";
+
+// Set initial theme
+if (currentTheme === "dark") {
+  html.setAttribute("data-theme", "dark");
+  themeIcon.textContent = "☀️";
+} else {
+  html.setAttribute("data-theme", "light");
+  themeIcon.textContent = "🌙";
+}
+
+// Toggle theme when button is clicked
+themeToggle.addEventListener("click", () => {
+  const currentTheme = html.getAttribute("data-theme");
+  const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+  html.setAttribute("data-theme", newTheme);
+  localStorage.setItem("theme", newTheme);
+
+  // Update icon
+  themeIcon.textContent = newTheme === "dark" ? "☀️" : "🌙";
+});
+
 // Smooth Scrolling for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
