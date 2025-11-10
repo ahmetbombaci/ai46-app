@@ -129,9 +129,6 @@ Currently using emojis as placeholders. Add real images:
 - [ ] Add blog section
 - [ ] Add case studies
 - [ ] Add team member profiles
-- [ ] Implement dark mode toggle
-- [ ] Add analytics (Google Analytics or Plausible)
-- [ ] Add sitemap.xml for SEO
 - [ ] Add testimonials carousel
 
 ## License
